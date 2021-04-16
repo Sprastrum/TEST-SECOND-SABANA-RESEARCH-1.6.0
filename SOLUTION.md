@@ -17,7 +17,7 @@
    
 Los tres momentos de las excepciones son: 
 * Lanzar: Este momento es cuando se inicia una excepción en un método, sirve para mandar la excepción a todos los 
-  sistemas que utilicen el método de la excepción.
+  sistemas que utilicen el método de la excepción. Para su implementación es la palabra reservada `throws`
 * Propagar: Este momento es cuando se manda la excepción a los demás sistemas que utilicen el método con la excepción,
   este sirve para llevar el seguimiento de la excepción, para implementarlo se usa la palabra reservada `throw`
 * Controlar: Este momento es cuando se quiere hacer alguna acción diferente al salir la excepción, sirve cuando 

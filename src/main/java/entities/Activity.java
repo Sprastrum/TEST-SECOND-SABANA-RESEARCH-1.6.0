@@ -37,6 +37,6 @@ public abstract class Activity {
      *
      * @return
      */
-    public abstract Duration getDuration();
+    public abstract Duration getDuration() throws SabanaResearchException;
 
 }

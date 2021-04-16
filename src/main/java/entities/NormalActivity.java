@@ -17,8 +17,21 @@ public class NormalActivity extends Activity {
         this.steps.add(step);
     }
 
+    public List<Step> getSteps() {
+        return steps;
+    }
+
     @Override
-    public Duration getDuration() {
-        return null;
+    public Duration getDuration() throws SabanaResearchException {
+        long days = 0;
+
+        if(steps.size() <= 0) {
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_NORMAL_ACTIVITY);
+        }
+        for(Step s : steps) {
+            days += s.getDuration().toSeconds();
+        }
+
+        return Duration.ofSeconds(days);
     }
 }

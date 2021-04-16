@@ -12,4 +12,12 @@ public class Step {
         this.duration = duration;
     }
 
+    /**
+     * Return the duration of step
+     *
+     * @return long
+     */
+    public Duration getDuration() {
+        return duration;
+    }
 }

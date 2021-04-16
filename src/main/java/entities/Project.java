@@ -27,9 +27,31 @@ public class Project {
         this.iterations.add(iteration);
     }
 
+    /**
+     *
+     * @return
+     * @throws SabanaResearchException
+     */
     public Duration getDuration() throws SabanaResearchException {
-        return Duration.ofDays(0);
+        long days = 0;
+
+        if(iterations.size() <= 0) {
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_PROJECT);
+        }
+        for(Iteration i : iterations) {
+            days += i.getDuration().toDays();
+        }
+
+        return Duration.ofDays(days);
     }
 
+    public int numberActivities() {
+        int n = 0;
 
+        for(Iteration i : iterations) {
+            n = i.getActivities().size();
+        }
+
+        return n;
+    }
 }
