@@ -22,7 +22,7 @@ el proyecto y el tiempo que tuvo cada itineración en un String, para seguido im
 4. Escriba la especificación (documentación + firma del método) de todos los métodos de apoyo que haya identificado.
 
 toString()
-* Imprime
+* Imprime la información contenida en el List de ISyntesizer y lo 
 
 ## III. (25%) EXTENDIENDO
 1. De los diseños resultantes del punto I y II, ¿Qué debe cambiar? ¿Qué no debe cambiar?. Justifique su respuesta.
