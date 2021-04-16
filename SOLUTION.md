@@ -2,15 +2,34 @@
 
 
 ## I. (30%) IMPLEMENTANDO
+![](img/ProjectTest.PNG)
+
+## II. (25%) DISEÑANDO
+1. Escriba la especificación (documentación + firma del método) del método.
+
+public String summarize()
+* Este método recopilará el resumen del tiempo total de trabajo del proyecto, así como el tiempo de cada estudiante en 
+el proyecto y el tiempo que tuvo cada itineración en un String, para seguido imprimirlo en pantalla.
+  
+2. Construya el diagrama de secuencia.
+   
+![](img/summarize-sequence-diagram.png)
+
+3. Actualice el diagrama de clases con los nuevos elementos (clases, métodos, atributos, relaciones).
+   
 
 
-## I. (25%) DISEÑANDO
+4. Escriba la especificación (documentación + firma del método) de todos los métodos de apoyo que haya identificado.
+
+toString()
+* Imprime
+
+## III. (25%) EXTENDIENDO
+1. De los diseños resultantes del punto I y II, ¿Qué debe cambiar? ¿Qué no debe cambiar?. Justifique su respuesta.
 
 
-## I. (25%) EXTENDIENDO
 
-
-## I. (20%) CONCEPTOS
+## IV. (20%) CONCEPTOS
 
 1. ¿Cuáles son las acciones los tres momentos importantes de las excepciones? ¿Cuál es el objetivo de cada una? 
 ¿Cómo se implementa en Java cada acción?.
@@ -28,22 +47,13 @@ La sobre-escritura de métodos es cuando hay una relación de herencia y el hijo
 método del padre. Se aplica para encapsular funcionamientos unicos para cada clase hija. Para impedir que una clase
 sobre-escriba el método se usa el `final`.
 
-## I. (50%) BONO
+## V. (50%) BONO
 
 Implemente pruebas unitarias el código necesario para que las mismas pases sobre el método `summarize()` de la clase
 `Project`, asegurese de probar el `ISynthesizer` de tipo `ExecutiveSynthesizer` y `StudentSynthesizer`, para cada uno 
 sus casos de éxito y excepciones.
 
 SI REALIZO EL BONO ASEGÚRESE DE INDICARLO EN EL ARCHIVO SOLUTIONS.md.
-
-## Condiciones
-
-1. La entrega debe realizarse en un archivo llamado SOLUTION.md, no se revisará documentación en ningún otro lugar.
-2. Puede encontrar los editables de los diagramas en este [enlace](https://unisabanaedu-my.sharepoint.com/:u:/g/personal/diegopt_unisabana_edu_co/ESYDrd-h2lFDjnEWv7D6qmIBMd89yuTTzS1Q7P4d68IUjQ?e=g9OcpW).
-3. Puede acceder a todos los recursos que considere necesarios, excepto pedirle ayuda a un tercero.
-4. El examen se calificará contra un conjunto de pruebas que no esta adjunto al parcial, sin embargo el mismo cuenta con un conjunto de pruebas modelo, piense en casos que pueden no estar cubiertos en el mismo.
-5. Revise la clase [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) de Java.
-5. Revise la clase [Duration](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html) de Java.
 
 ## Entrega
 
