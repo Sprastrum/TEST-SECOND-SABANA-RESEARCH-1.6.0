@@ -1,0 +1,33 @@
+{
+  "name": "TEST-SECOND-SABANA-RESEARCH",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SABANA-POOB/TEST-SECOND-SABANA-RESEARCH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SABANA-POOB/TEST-SECOND-SABANA-RESEARCH/issues"
+  },
+  "homepage": "https://github.com/SABANA-POOB/TEST-SECOND-SABANA-RESEARCH#readme",
+  "devDependencies": {
+    "semantic-release": "17.3.9"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  }
+}
