@@ -28,8 +28,9 @@ public class Project {
     }
 
     /**
+     * Return the duration of all project
      *
-     * @return
+     * @return Duration
      * @throws SabanaResearchException
      */
     public Duration getDuration() throws SabanaResearchException {

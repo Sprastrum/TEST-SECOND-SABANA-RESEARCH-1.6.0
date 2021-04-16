@@ -19,6 +19,12 @@ public class DocumentedActivity extends Activity {
         this.questions.add(question);
     }
 
+    /**
+     * Return the duration of all steps and all questions
+     *
+     * @return Duration
+     * @throws SabanaResearchException
+     */
     @Override
     public Duration getDuration() throws SabanaResearchException {
         long sec = 0;

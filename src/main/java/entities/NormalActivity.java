@@ -17,10 +17,21 @@ public class NormalActivity extends Activity {
         this.steps.add(step);
     }
 
+    /**
+     * Return all steps
+     *
+     * @return List
+     */
     public List<Step> getSteps() {
         return steps;
     }
 
+    /**
+     * Return the duration of all steps
+     *
+     * @return Duration
+     * @throws SabanaResearchException
+     */
     @Override
     public Duration getDuration() throws SabanaResearchException {
         long days = 0;

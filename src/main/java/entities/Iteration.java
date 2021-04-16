@@ -22,10 +22,21 @@ public class Iteration {
         this.activities.add(activity);
     }
 
+    /**
+     * Return all activities of iteration
+     *
+     * @return
+     */
     public List<Activity> getActivities() {
         return activities;
     }
 
+    /**
+     * Return the duration of all activities
+     *
+     * @return
+     * @throws SabanaResearchException
+     */
     public Duration getDuration() throws SabanaResearchException {
         long days = 0;
 
