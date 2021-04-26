@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.sonarqube' version '3.1.1'
 }
 
 group 'sabana.poob'
@@ -22,5 +23,14 @@ test {
     useJUnitPlatform()
     testLogging {
         events "passed", "skipped", "failed"
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.host.url', 'http://localhost:9800'
+        property 'sonar.projectName', 'SANTIAGO SANTOS SABANA RESEARCH'
+        property 'sonar.projectKey', 'sabana.poob:grandle-multimodule'
+        property 'sonar.sourceEncoding', 'UTF-8'
     }
 }
