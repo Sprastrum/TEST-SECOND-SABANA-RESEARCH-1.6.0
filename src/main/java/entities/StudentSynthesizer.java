@@ -8,7 +8,7 @@ public class StudentSynthesizer implements ISynthesizer {
     private List<String> synthesizer = new ArrayList<>();
 
     @Override
-    public String synthesizer(List<Student> students, List<Iteration> iterations) {
+    public List<String> synthesizer(List<Student> students, List<Iteration> iterations) {
 
         for(Student s : students) {
             synthesizer.add(s.getCompleteName() + " - " + s.getDuration());

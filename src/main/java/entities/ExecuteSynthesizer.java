@@ -6,12 +6,19 @@ import java.util.List;
 
 public class ExecuteSynthesizer implements ISynthesizer {
 
+    private List<String> synthesizer = new ArrayList<>();
+
     @Override
-    public String synthesizer(List<Student> students, List<Iteration> iterations) {
-        String d = "";
+    public List<String> synthesizer(List<Student> students, List<Iteration> iterations) {
+        String d = null;
 
         for(Iteration i : iterations) {
-            d.
+            try {
+                synthesizer.add(i.getGoal() + " - " + i.getDuration());
+            } catch (SabanaResearchException e) {
+                synthesizer.add(i.getGoal() + " - " + d);
+            }
+            synthesizer.add(i.getGoal() + " - " + d);
         }
 
         return synthesizer;
