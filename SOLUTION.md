@@ -1,3 +1,41 @@
+# Parcial-1
+Primer parcial de POO de Santiago Santos.
+
+
+# I. Memoria
+
+* ### Mapa de memoria parte 1
+
+![](Img/Map1.PNG)
+
+* ### Mapa de memoria parte 2
+
+![](Img/Map2.PNG)
+
+* ### Mapa de memoria Completo
+
+![](Img/Map3.PNG)
+
+# III. Diseño
+
+![](Img/Dis.png)
+
+# IV. Conceptos
+### 1. Encapsulamiento:
+Encapsulamiento es mantener una información constante,
+así se evita que otras clases modifiquen la información y para mantener uso
+único a cada clase.
+
+
+### 2. Ocultamiento
+El ocultamiento es mantener la información escondida de otras clases.
+
+# V. Bono
+
+![](Img/sequence-diagram-bonus.png)
+
+------------------
+
 # POOB-TEST-SECOND-SABANA-RESEARCH
 
 
@@ -9,24 +47,29 @@
 
 public String summarize()
 * Este método recopilará el resumen del tiempo total de trabajo del proyecto, así como el tiempo de cada estudiante en 
-el proyecto y el tiempo que tuvo cada itineración en un String, para seguido imprimirlo en pantalla.
+el proyecto y el tiempo que tuvo cada itineración en un String.
   
 2. Construya el diagrama de secuencia.
    
-![](img/summarize-sequence-diagram.png)
+![](img/diseño2.png)
 
 3. Actualice el diagrama de clases con los nuevos elementos (clases, métodos, atributos, relaciones).
-   
 
+![](img/class-diagram-synthesizer.png)
 
 4. Escriba la especificación (documentación + firma del método) de todos los métodos de apoyo que haya identificado.
 
-toString()
-* Imprime la información contenida en el List de ISyntesizer y lo 
+public List<String> toString(List<Student> s, List<Iteration> i)
+* Convierte la información del parametro en un A 
 
 ## III. (25%) EXTENDIENDO
+
+![](img/class-diagram-parte-3.png)
+
 1. De los diseños resultantes del punto I y II, ¿Qué debe cambiar? ¿Qué no debe cambiar?. Justifique su respuesta.
 
+Ahora al tener una actividad o una iteración que realizar antes de comenzar la actividad, tomara más tiempo en 
+realizarse. Entonces la parte I podría ser cambiada
 
 
 ## IV. (20%) CONCEPTOS
@@ -52,40 +95,3 @@ sobre-escriba el método se usa el `final`.
 Implemente pruebas unitarias el código necesario para que las mismas pases sobre el método `summarize()` de la clase
 `Project`, asegurese de probar el `ISynthesizer` de tipo `ExecutiveSynthesizer` y `StudentSynthesizer`, para cada uno 
 sus casos de éxito y excepciones.
-
-SI REALIZO EL BONO ASEGÚRESE DE INDICARLO EN EL ARCHIVO SOLUTIONS.md.
-
-## Entrega
-
-Siga al pie de la letra estas indicaciones para la entrega de este punto. EL HACER CASO OMISO DE ESTAS INSTRUCCIONES 
-PENALIZARÁ LA NOTA.
-
-1. Configure su usuario de GIT
-
-```bash
-$ git config --global user.name "Juan Perez"
-$ git config --global user.email juan.perez@unisabana.edu.co
-```
-
-2. Desde el directorio raíz (donde está este archivo README.md), haga commit de lo realizado. Mantenga su repositorio 
-privado hasta después de la entrega del parcial, entonces hagalo publico.
-
-```bash
-$ git add .
-$ git commit -m "entrega parcial - Juan Perez"
-```
-
-3. Desde este mismo directorio, comprima todo con: (no olvide el punto al final de la instrucción)
-
-```bash
-$ zip -r APELLIDO.NOMBRE.zip .
-```
-
-4. Abra el archivo ZIP creado, y rectifique que contenga lo desarrollado.
-
-5. Suba el archivo antes creado (APELLIDO.NOMBRE.zip) en el espacio de Teams correspondiente.
-
-6. IMPORTANTE!. Conserve una copia de la carpeta y del archivo .ZIP.
-
-7. Haga commits recurrentes para verificar su progreso, UN PARCIAL SOLUCIONADO EN 1 SOLO COMMIT SE CONSIDERA COPIA.
- 

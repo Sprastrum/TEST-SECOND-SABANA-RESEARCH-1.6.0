@@ -53,4 +53,15 @@ public class DocumentedActivity extends Activity {
         }
         return Duration.ofSeconds(sec);
     }
+
+    @Override
+    public boolean isActive() {
+        boolean result = false;
+
+        if(getState().equals(ACTIVE_STATE) || getState().equals(PENDING_STATE)) {
+            result = true;
+        }
+
+        return result;
+    }
 }

@@ -100,11 +100,22 @@ public class ProjectTest {
         assertEquals(SabanaResearchException.BAD_FORMED_NORMAL_ACTIVITY, exception.getMessage());
     }
 
+    @Test
+    public void should() {
+        assertNotNull(wellFormedProject.summarize());
+    }
+
     private void setupWellFormedProject() {
 
         Group group = new Group(faker.team().name());
-        wellFormedProject = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
         Iteration iteration = new Iteration(faker.team().name(), wellFormedProject);
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(faker.name().name(), faker.name().lastName(), Duration.ofDays(1)));
+        students.add(new Student(faker.name().name(), faker.name().lastName(), Duration.ofDays(1)));
+        students.add(new Student(faker.name().name(), faker.name().lastName(), Duration.ofDays(1)));
+
+        wellFormedProject = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group, students);
+        wellFormedProject.addIteration(iteration);
 
         // Create a Normal Activity
         NormalActivity normalActivity = new NormalActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration);
@@ -120,13 +131,13 @@ public class ProjectTest {
     private void setupBadFormedProject1() {
 
         Group group = new Group(faker.team().name());
-        badFormedProject1 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
+        badFormedProject1 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group, null);
     }
 
     private void setupBadFormedProject2() {
 
         Group group = new Group(faker.team().name());
-        badFormedProject2 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
+        badFormedProject2 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group, null);
         Iteration iteration = new Iteration(faker.team().name(), badFormedProject2);
 
         // Create a Normal Activity
@@ -146,7 +157,7 @@ public class ProjectTest {
     private void setupBadFormedProject3() {
 
         Group group = new Group(faker.team().name());
-        badFormedProject3 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
+        badFormedProject3 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group, null);
         Iteration iteration = new Iteration(faker.team().name(), badFormedProject3);
 
         // Create a Normal Activity
@@ -166,7 +177,7 @@ public class ProjectTest {
     private void setupBadFormedProject4() {
 
         Group group = new Group(faker.team().name());
-        badFormedProject4 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
+        badFormedProject4 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group, null);
         Iteration iteration = new Iteration(faker.team().name(), badFormedProject4);
 
         // Create a Normal Activity
@@ -188,7 +199,7 @@ public class ProjectTest {
     private void setupBadFormedProject5() {
 
         Group group = new Group(faker.team().name());
-        badFormedProject5 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
+        badFormedProject5 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group, null);
         Iteration iteration = new Iteration(faker.team().name(), badFormedProject5);
 
         // Create a Normal Activity
@@ -209,7 +220,7 @@ public class ProjectTest {
     private void setupBadFormedProject6() {
 
         Group group = new Group(faker.team().name());
-        badFormedProject6 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
+        badFormedProject6 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group, null);
         Iteration iteration = new Iteration(faker.team().name(), badFormedProject6);
 
         // Create a Normal Activity

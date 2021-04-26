@@ -29,6 +29,26 @@ public class SabanaResearch {
      * @return The new Summary entry.
      */
     public Summary createSummaryEntry() {
-        return null;
+        int ap = 0;
+
+        for(Group g : groups) {
+            if(g.countActiveProjects(1) > 0) {
+                ap++;
+            }
+        }
+
+        Summary summary = new Summary(LocalDate.now(), ap);
+        return summary;
+    }
+
+    public String numberActivitiesOpenOrClose() {
+        int open = 0, close = 0;
+
+        for(Group g : groups) {
+            open += g.countActiveProjects(2);
+            close += g.countActiveProjects(3);
+        }
+
+        return "Activities Open: " + open + " - Activities Close: " + close;
     }
 }

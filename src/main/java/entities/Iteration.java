@@ -18,6 +18,10 @@ public class Iteration {
         project.addIteration(this);
     }
 
+    public String getGoal() {
+        return goal;
+    }
+
     public void addActivity(Activity activity) {
         this.activities.add(activity);
     }
@@ -50,5 +54,39 @@ public class Iteration {
         }
 
         return Duration.ofDays(days);
+    }
+
+    /**
+     * Count one if activity is true.
+     *
+     * @return number of activities opens or pendings.
+     */
+    public int countOpenActivities() {
+        int open = 0;
+
+        for(Activity a : activities) {
+            if(a.isActive()) {
+                open++;
+            }
+        }
+
+        return open;
+    }
+
+    /**
+     * Count one if activity is true.
+     *
+     * @return number of activities close or canceled.
+     */
+    public int countCloseActivities() {
+        int close = 0;
+
+        for(Activity a : activities) {
+            if(!a.isActive()) {
+                close++;
+            }
+        }
+
+        return close;
     }
 }

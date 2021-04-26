@@ -23,6 +23,10 @@ public abstract class Activity {
         }
     }
 
+    public String getState() {
+        return state;
+    }
+
     /**
      * Evaluate if an activity is active.
      *
@@ -38,5 +42,4 @@ public abstract class Activity {
      * @return
      */
     public abstract Duration getDuration() throws SabanaResearchException;
-
 }

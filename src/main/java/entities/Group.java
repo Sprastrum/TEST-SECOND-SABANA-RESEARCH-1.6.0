@@ -17,4 +17,30 @@ public class Group {
         this.projects.add(plan);
     }
 
+    /**
+     * Count one if project is true.
+     *
+     * @return number of projects opens or if the dateEnd is after the system date.
+     */
+    public int countActiveProjects(int opc){
+        int ap = 0;
+
+        for(Project p : projects) {
+            if(opc == 1) {
+                if(p.isActive()) {
+                    ap++;
+                }
+            }
+            else if(opc == 2) {
+                ap += p.countActiveIterations();
+            }
+            else if(opc == 3) {
+                ap += p.countCloseActivities();
+            }
+        }
+
+        return ap;
+    }
+
+
 }
